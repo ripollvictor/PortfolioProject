@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                  https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="App\PortfolioManagementContext\Domain\Model\Portfolio\Allocation" table="allocation">
+        <id name="id" type="string" length="36">
+            <options>
+                <option name="fixed">true</option>
+                <option name="charset">ascii</option>
+            </options>
+        </id>
+        <field name="shares" type="integer"/>
+
+        <many-to-one field="portfolio" target-entity="App\PortfolioManagementContext\Domain\Model\Portfolio\Portfolio" inversed-by="allocations">
+                <join-column name="portfolio_id" nullable="false" />
+        </many-to-one>
+
+    </entity>
+
+</doctrine-mapping>

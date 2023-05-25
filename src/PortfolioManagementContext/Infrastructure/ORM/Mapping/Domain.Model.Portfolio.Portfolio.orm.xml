@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                  https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="App\PortfolioManagementContext\Domain\Model\Portfolio\Portfolio" table="portfolio">
+        <id name="id" type="string" length="36">
+            <options>
+                <option name="fixed">true</option>
+                <option name="charset">ascii</option>
+            </options>
+        </id>
+
+        <one-to-many field="allocations" target-entity="App\PortfolioManagementContext\Domain\Model\Portfolio\Allocation" mapped-by="portfolio" fetch="EXTRA_LAZY">
+            <cascade>
+                <cascade-all/>
+            </cascade>
+        </one-to-many>
+
+    </entity>
+
+</doctrine-mapping>
