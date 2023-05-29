@@ -1,6 +1,6 @@
 <?php
 
-namespace App\PortfolioManagementContext\Application\Command;
+namespace App\PortfolioManagementContext\Application\Command\Portfolio;
 
 use App\PortfolioManagementContext\Domain\Command\Portfolio\UpdatePortfolioCommand;
 use App\PortfolioManagementContext\Domain\Model\Portfolio\PortfolioRepository;

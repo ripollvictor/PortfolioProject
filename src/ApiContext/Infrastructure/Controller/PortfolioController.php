@@ -2,33 +2,20 @@
 
 namespace App\ApiContext\Infrastructure\Controller;
 
+use App\ApiContext\Infrastructure\ApiBaseController;
 use App\PortfolioManagementContext\Domain\Command\Portfolio\CreatePortfolioCommand;
 use App\PortfolioManagementContext\Domain\Command\Portfolio\UpdatePortfolioCommand;
 use App\PortfolioManagementContext\Domain\Model\Portfolio\Allocation;
-use App\PortfolioManagementContext\Domain\Query\FindPortfolioQuery;
 use App\PortfolioManagementContext\Domain\Query\FindAllPortfoliosQuery;
-use App\Shared\Domain\Bus\Command\CommandBus;
-use App\Shared\Domain\Bus\Query\QueryBus;
+use App\PortfolioManagementContext\Domain\Query\FindPortfolioQuery;
 use JMS\Serializer\SerializerBuilder;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 
-
-class PortfolioController extends AbstractController
+class PortfolioController extends ApiBaseController
 {
-
-    private CommandBus $commandBus;
-    private QueryBus $queryBus;
-
-    public function __construct(CommandBus $commandBus, QueryBus $queryBus)
-    {
-        $this->commandBus = $commandBus;
-        $this->queryBus = $queryBus;
-    }
-
 
     /**
      * @Route("/portfolios", name="create_portfolio", methods={"POST"})

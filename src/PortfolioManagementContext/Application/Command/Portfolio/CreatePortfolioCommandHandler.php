@@ -1,6 +1,6 @@
 <?php
 
-namespace App\PortfolioManagementContext\Application\Command;
+namespace App\PortfolioManagementContext\Application\Command\Portfolio;
 
 use App\PortfolioManagementContext\Domain\Command\Portfolio\CreatePortfolioCommand;
 use App\PortfolioManagementContext\Domain\Model\Portfolio\Portfolio;

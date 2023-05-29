@@ -4,7 +4,9 @@ namespace App\PortfolioManagementContext\Domain\Model\Order;
 
 interface OrderRepository
 {
-    public function byId(int $id): ?Order;
+    public function byId(string $id): ?Order;
 
-    public function save(Order $portfolio): void;
+    public function all(): array;
+
+    public function save(Order $order): void;
 }

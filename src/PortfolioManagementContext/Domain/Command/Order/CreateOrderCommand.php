@@ -1,15 +1,16 @@
 <?php
 
-namespace App\PortfolioManagementContext\Domain\Model\Order;
+namespace App\PortfolioManagementContext\Domain\Command\Order;
 
-class Order
+use App\Shared\Domain\Bus\Command\Command;
+
+class CreateOrderCommand implements Command
 {
     private string $id;
     private string $portfolioId;
     private string $allocationId;
     private int $shares;
     private string $type;
-    private bool $completed;
 
     public function __construct(string $id, string $portfolioId, string $allocationId, int $shares, string $type)
     {
@@ -18,8 +19,8 @@ class Order
         $this->allocationId = $allocationId;
         $this->shares = $shares;
         $this->type = $type;
-        $this->completed = false;
     }
+
 
     public function getId(): string
     {
@@ -45,17 +46,5 @@ class Order
     {
         return $this->type;
     }
-
-    public function isCompleted(): bool
-    {
-        return $this->completed;
-    }
-
-    public function setCompleted(bool $completed): void
-    {
-        $this->completed = $completed;
-    }
-
-
 
 }

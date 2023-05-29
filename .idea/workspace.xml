@@ -5,17 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01bf6c81-3751-444e-a6f6-79eac8723397" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Query/FindAllPortfoliosQueryHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Query/FindAllPortfoliosQuery.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Command/Order/CompleteOrderCommandHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Command/Order/CreateOrderCommandHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Command/Order/CompleteOrderCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Command/Order/CreateOrderCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Infrastructure/Domain/Model/Order/DoctrineOrderRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Infrastructure/ORM/Mapping/Domain.Model.Order.Order.orm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20230524163124.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ApiContext/Infrastructure/ApiBaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiContext/Infrastructure/ApiBaseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ApiContext/Infrastructure/Controller/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiContext/Infrastructure/Controller/OrderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ApiContext/Infrastructure/Controller/PortfolioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiContext/Infrastructure/Controller/PortfolioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Query/FindPortafolioQuery.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Query/FindPortfolioQuery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Query/FindPortfolioQueryHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Query/FindPortfolioQueryHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Model/Portfolio/PortfolioRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Model/Portfolio/PortfolioRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PortfolioManagementContext/Infrastructure/Domain/Model/Portfolio/DoctrinePortfolioRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Infrastructure/Domain/Model/Portfolio/DoctrinePortfolioRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PortfolioManagementContext/Infrastructure/ORM/Mapping/Domain.Model.Portfolio.Portfolio.orm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Infrastructure/ORM/Mapping/Domain.Model.Portfolio.Portfolio.orm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shared/Infrastructure/Bus/Query/JsonResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared/Infrastructure/Bus/Query/JsonResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Command/CreatePortfolioCommandHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Command/Portfolio/CreatePortfolioCommandHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Command/UpdatePortfolioCommandHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Command/Portfolio/UpdatePortfolioCommandHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Query/FindAllPortfoliosQueryHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Query/Portfolio/FindAllPortfoliosQueryHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Query/FindPortfolioQueryHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Query/Portfolio/FindPortfolioQueryHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Model/Order/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Model/Order/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Model/Order/OrderRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Model/Order/OrderRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,22 +105,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ripollvictor/Projects/PortfolioBackend/PortfolioBackend/src/PortfolioManagementContext/Domain/Command/Portfolio&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/ripollvictor/Projects/PortfolioBackend/PortfolioBackend/src/PortfolioManagementContext/Infrastructure/ORM/Mapping",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/PortfolioManagementContext/Infrastructure/ORM/Mapping" />
       <recent name="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Command/Portfolio" />
       <recent name="$PROJECT_DIR$/src/Shared/Domain/Bus" />
       <recent name="$PROJECT_DIR$/src/Shared/Domain" />
@@ -132,7 +138,7 @@
       <workItem from="1684874191488" duration="627000" />
       <workItem from="1684944350533" duration="16000" />
       <workItem from="1684944368539" duration="27420000" />
-      <workItem from="1685376501610" duration="3076000" />
+      <workItem from="1685376501610" duration="6572000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                  https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="App\PortfolioManagementContext\Domain\Model\Order\Order" table="`order`">
+        <id name="id" type="string" length="36">
+            <options>
+                <option name="fixed">true</option>
+                <option name="charset">ascii</option>
+            </options>
+        </id>
+        <field name="portfolioId" column="portfolio_id" length="36"/>
+        <field name="allocationId" column="allocation_id" length="36"/>
+        <field name="type" length="12"/>
+        <field name="shares" type="integer"/>
+        <field name="completed" type="boolean"/>
+
+    </entity>
+
+</doctrine-mapping>
