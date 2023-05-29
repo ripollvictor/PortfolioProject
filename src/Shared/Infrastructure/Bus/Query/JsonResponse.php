@@ -15,14 +15,14 @@ class JsonResponse implements Response
     private int $status;
 
 
-    public function __construct($data)
+    public function __construct($data, int $status = 200)
     {
         $this->serializer = SerializerBuilder::create()->build();
         $this->json = $this->serializer->serialize($data, 'json');
-        $this->status = 200;
+        $this->status = $status;
     }
 
-   public function json(): string
+    public function json(): string
     {
         return $this->json;
     }

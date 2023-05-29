@@ -2,10 +2,11 @@
 
 namespace App\ApiContext\Infrastructure\Controller;
 
-use App\PortfolioManagementContext\Application\Query\FindPortafolioQuery;
 use App\PortfolioManagementContext\Domain\Command\Portfolio\CreatePortfolioCommand;
 use App\PortfolioManagementContext\Domain\Command\Portfolio\UpdatePortfolioCommand;
 use App\PortfolioManagementContext\Domain\Model\Portfolio\Allocation;
+use App\PortfolioManagementContext\Domain\Query\FindPortfolioQuery;
+use App\PortfolioManagementContext\Domain\Query\FindAllPortfoliosQuery;
 use App\Shared\Domain\Bus\Command\CommandBus;
 use App\Shared\Domain\Bus\Query\QueryBus;
 use JMS\Serializer\SerializerBuilder;
@@ -13,6 +14,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+
 
 
 class PortfolioController extends AbstractController
@@ -44,10 +46,23 @@ class PortfolioController extends AbstractController
     /**
      * @Route("/portfolios/{id}", name="get_portfolio", methods={"GET"})
      */
-    public function getPortfolio(Request $request, string $id): Response
+    public function getPortfolio(string $id): Response
     {
 
-        $response = $this->queryBus->ask(new FindPortafolioQuery($id));
+        $response = $this->queryBus->ask(new FindPortfolioQuery($id));
+
+        return new Response($response->json(), $response->status(), [
+            'Content-Type' => 'application/json'
+        ]);
+    }
+
+    /**
+     * @Route("/portfolios", name="get_portfolios", methods={"GET"})
+     */
+    public function getPortfolios(): Response
+    {
+
+        $response = $this->queryBus->ask(new FindAllPortfoliosQuery());
 
         return new Response($response->json(), $response->status(), [
             'Content-Type' => 'application/json'

@@ -19,6 +19,10 @@ class DoctrinePortfolioRepository extends ServiceEntityRepository implements Por
     return $this->find($id);
     }
 
+    public function all(): array {
+        return $this->findAll();
+    }
+
     public function save(Portfolio $portfolio): void
     {
         $this->_em->persist($portfolio);

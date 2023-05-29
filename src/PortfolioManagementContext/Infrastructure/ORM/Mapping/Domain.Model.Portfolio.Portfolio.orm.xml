@@ -12,7 +12,7 @@
             </options>
         </id>
 
-        <one-to-many field="allocations" target-entity="App\PortfolioManagementContext\Domain\Model\Portfolio\Allocation" mapped-by="portfolio" fetch="EXTRA_LAZY">
+        <one-to-many field="allocations" target-entity="App\PortfolioManagementContext\Domain\Model\Portfolio\Allocation" mapped-by="portfolio" orphan-removal="true" fetch="EXTRA_LAZY">
             <cascade>
                 <cascade-all/>
             </cascade>

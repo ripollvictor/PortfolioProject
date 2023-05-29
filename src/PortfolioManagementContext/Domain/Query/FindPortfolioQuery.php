@@ -1,11 +1,11 @@
 <?php
 
-namespace App\PortfolioManagementContext\Application\Query;
+namespace App\PortfolioManagementContext\Domain\Query;
 
 
 use App\Shared\Domain\Bus\Query\Query;
 
-class FindPortafolioQuery implements Query
+class FindPortfolioQuery implements Query
 {
     private string $id;
 

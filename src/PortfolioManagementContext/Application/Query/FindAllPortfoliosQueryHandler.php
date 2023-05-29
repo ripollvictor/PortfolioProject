@@ -3,12 +3,12 @@
 namespace App\PortfolioManagementContext\Application\Query;
 
 use App\PortfolioManagementContext\Domain\Model\Portfolio\PortfolioRepository;
-use App\PortfolioManagementContext\Domain\Query\FindPortfolioQuery;
+use App\PortfolioManagementContext\Domain\Query\FindAllPortfoliosQuery;
 use App\Shared\Domain\Bus\Query\QueryHandler;
 use App\Shared\Domain\Bus\Query\Response;
 use App\Shared\Infrastructure\Bus\Query\JsonResponse;
 
-class FindPortfolioQueryHandler implements QueryHandler
+class FindAllPortfoliosQueryHandler implements QueryHandler
 {
 
     private PortfolioRepository $portfolioRepository;
@@ -19,12 +19,9 @@ class FindPortfolioQueryHandler implements QueryHandler
     }
 
 
-    public function __invoke(FindPortfolioQuery $query): ?Response
+    public function __invoke(FindAllPortfoliosQuery $query): ?Response
     {
-        $portfolio = $this->portfolioRepository->byId($query->getId());
-
-        if (!$portfolio)
-            return new JsonResponse("", 404);
+        $portfolio = $this->portfolioRepository->all();
 
         return new JsonResponse($portfolio);
     }
