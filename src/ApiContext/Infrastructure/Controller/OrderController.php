@@ -5,6 +5,7 @@ namespace App\ApiContext\Infrastructure\Controller;
 use App\ApiContext\Infrastructure\ApiBaseController;
 use App\PortfolioManagementContext\Domain\Command\Order\CompleteOrderCommand;
 use App\PortfolioManagementContext\Domain\Command\Order\CreateOrderCommand;
+use App\PortfolioManagementContext\Domain\Query\FindAllOrdersQuery;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -39,6 +40,18 @@ class OrderController extends ApiBaseController
         }
 
         return new Response(null, Response::HTTP_OK);
+    }
+
+    /**
+     * @Route("/order", name="get_orders", methods={"GET"})
+     */
+    public function getOrders(): Response
+    {
+        $response = $this->queryBus->ask(new FindAllOrdersQuery());
+
+        return new Response($response->json(), $response->status(), [
+            'Content-Type' => 'application/json'
+        ]);
     }
 
 

@@ -3,9 +3,9 @@
 namespace App\PortfolioManagementContext\Application\Command\Portfolio;
 
 use App\PortfolioManagementContext\Domain\Command\Portfolio\UpdatePortfolioCommand;
+use App\PortfolioManagementContext\Domain\Exception\PortfolioNotFoundException;
 use App\PortfolioManagementContext\Domain\Model\Portfolio\PortfolioRepository;
 use App\Shared\Domain\Bus\Command\CommandHandler;
-use Doctrine\ORM\EntityNotFoundException;
 
 class UpdatePortfolioCommandHandler implements CommandHandler
 {
@@ -22,7 +22,7 @@ class UpdatePortfolioCommandHandler implements CommandHandler
         $portfolio = $this->portfolioRepository->byId($command->getId());
 
         if (!$portfolio) {
-            throw new EntityNotFoundException;
+            throw new PortfolioNotFoundException();
         }
 
         $portfolio->setAllocations($command->getAllocations());

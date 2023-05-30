@@ -2,8 +2,12 @@
 
 namespace App\PortfolioManagementContext\Domain\Model\Order;
 
+use http\Exception\InvalidArgumentException;
+
 class Order
 {
+    public const BUY_ORDER = 'buy';
+    public const SELL_ORDER = 'sell';
     private string $id;
     private string $portfolioId;
     private string $allocationId;
@@ -55,7 +59,6 @@ class Order
     {
         $this->completed = $completed;
     }
-
 
 
 }

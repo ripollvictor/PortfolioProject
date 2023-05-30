@@ -47,5 +47,15 @@ class Portfolio
             $this->allocations->removeElement($allocation);
     }
 
+    public function getAllocation(string $allocationId): ?Allocation
+    {
+        return $this->allocations->findFirst(fn($key, $value) => $value->getId() === $allocationId);
+    }
+
+    public function addAllocation(Allocation $allocation): void
+    {
+        $this->allocations->add($allocation);
+    }
+
 
 }
