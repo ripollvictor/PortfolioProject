@@ -3,6 +3,7 @@
 namespace App\Shared\Infrastructure\Bus\Query;
 
 use App\Shared\Domain\Bus\Query\Response;
+use JMS\Serializer\Naming\IdenticalPropertyNamingStrategy;
 use JMS\Serializer\SerializerBuilder;
 use JMS\Serializer\SerializerInterface;
 
@@ -17,7 +18,9 @@ class JsonResponse implements Response
 
     public function __construct($data, int $status = 200)
     {
-        $this->serializer = SerializerBuilder::create()->build();
+        $serializerbuilder = SerializerBuilder::create();
+        $serializerbuilder->setPropertyNamingStrategy(new IdenticalPropertyNamingStrategy());
+        $this->serializer = $serializerbuilder->build();
         $this->json = $this->serializer->serialize($data, 'json');
         $this->status = $status;
     }

@@ -21,13 +21,13 @@ class OrderController extends ApiBaseController
     {
         $data = json_decode($request->getContent(), true);
 
-        $this->commandBus->dispatch(new CreateOrderCommand($data['id'], $data['portfolio'], $data['allocation'], $data['shares'], $data['type']));
+        $this->commandBus->dispatch(new CreateOrderCommand($data['id'], $data['portfolioId'], $data['allocationId'], $data['shares'], $data['type']));
 
         return $this->json([], Response::HTTP_CREATED);
     }
 
     /**
-     * @Route("/order/{id}", name="update_order", methods={"PATCH"})
+     * @Route("/order/{id}", name="order", methods={"PATCH"})
      */
     public function updateOrder(Request $request, string $id): Response
     {

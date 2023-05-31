@@ -5,27 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01bf6c81-3751-444e-a6f6-79eac8723397" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Query/Order/FindAllOrdersQueryHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Exception/AllocationNotFoundException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Exception/EntityAlreadyExistsException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Exception/InvalidTypeException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Exception/OrderNotFoundException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Exception/PortfolioNotFoundException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Query/FindAllOrdersQuery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Shared/Domain/UuidGenerator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Shared/Infrastructure/RamseyUuidGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ApiContext/Infrastructure/Controller/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiContext/Infrastructure/Controller/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Command/Order/CompleteOrderCommandHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Command/Order/CompleteOrderCommandHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Command/Order/CreateOrderCommandHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Command/Order/CreateOrderCommandHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Command/Portfolio/CreatePortfolioCommandHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Command/Portfolio/CreatePortfolioCommandHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Command/Portfolio/UpdatePortfolioCommandHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Application/Command/Portfolio/UpdatePortfolioCommandHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Model/Order/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Model/Order/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Model/Portfolio/Portfolio.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortfolioManagementContext/Domain/Model/Portfolio/Portfolio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shared/Infrastructure/Bus/Query/JsonResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared/Infrastructure/Bus/Query/JsonResponse.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +20,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -149,6 +132,11 @@
       <workItem from="1685376501610" duration="6572000" />
       <workItem from="1685396282579" duration="4380000" />
       <workItem from="1685461027326" duration="314000" />
+      <workItem from="1685483184966" duration="1342000" />
+      <workItem from="1685566135804" duration="1136000" />
+      <workItem from="1685570911939" duration="81000" />
+      <workItem from="1685571507722" duration="256000" />
+      <workItem from="1685572214650" duration="232000" />
     </task>
     <servers />
   </component>
