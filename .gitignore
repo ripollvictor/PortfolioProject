@@ -9,3 +9,8 @@
 /vendor/
 ###< symfony/framework-bundle ###
 /.docker/.env.nginx.local
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
