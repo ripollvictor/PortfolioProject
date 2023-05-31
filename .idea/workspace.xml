@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01bf6c81-3751-444e-a6f6-79eac8723397" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/PortfolioManagementContext/Application/Command/Portfolio/CreatePortfolioCommandHandlerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/PortfolioManagementContext/Application/Command/Portfolio/UpdatePortfolioCommandHandlerTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +161,7 @@
       <workItem from="1685570911939" duration="81000" />
       <workItem from="1685571507722" duration="256000" />
       <workItem from="1685572214650" duration="302000" />
-      <workItem from="1685572887321" duration="1836000" />
+      <workItem from="1685572887321" duration="2154000" />
     </task>
     <servers />
   </component>
