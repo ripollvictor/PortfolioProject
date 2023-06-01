@@ -2,7 +2,7 @@
 
 ## Description 😀
 
-This project is a web application implemented using Docker, PHP 8.2, MySQL, Nginx, Symfony 6.2, and Doctrine as the ORM and PHPUnit for unit testing. 
+This project is an API implemented using Docker, PHP 8.2, MySQL, Nginx, Symfony 6.2, and Doctrine as the ORM and PHPUnit for unit testing. 
 
 This project adheres to the hexagonal architecture and embraces the principles of Domain-Driven Design (DDD). It also incorporates an implementation of the CQRS pattern using a Command Bus and a Query Bus.
 
