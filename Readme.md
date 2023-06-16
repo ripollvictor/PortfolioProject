@@ -1,4 +1,4 @@
-# Project Portfolio Finizens 🐳 Docker + PHP 8.2 + MySQL + Nginx + Symfony 6.2
+# Project Portfolio 🐳 Docker + PHP 8.2 + MySQL + Nginx + Symfony 6.2
 
 ## Description 😀
 
